@@ -5,12 +5,13 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [SerializeField] private GameObject projectile;
-    
-    GameObject currentTarget;
     [SerializeField] float shotTimer;
+    [SerializeField] string towerType;
+    
+    private GameObject currentTarget;
     private bool readyToShoot = true;
     private float timeToNextShot;
-    [SerializeField] string towerType;
+    
 
     
     private void OnTriggerEnter2D(Collider2D other) {
@@ -64,7 +65,7 @@ public class Tower : MonoBehaviour
         {
             bullet.transform.localScale = new Vector3(1.75f, 1.75f, 1.75f);
         }
-        bullet.GetComponent<HitTarget>().SetHitTarget(currentTarget);
+        bullet.GetComponent<Projectile>().SetHitTarget(currentTarget);
         timeToNextShot = shotTimer;
         readyToShoot = false;
     }

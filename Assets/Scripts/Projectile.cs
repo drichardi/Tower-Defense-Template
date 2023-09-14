@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class HitTarget : MonoBehaviour
+public class Projectile : MonoBehaviour
 {
     [SerializeField] private float projSpeed = 10;
     public GameObject hitTarget;
@@ -18,11 +18,6 @@ public class HitTarget : MonoBehaviour
         hitTarget = value;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
     
     // Update is called once per frame
     void Update()

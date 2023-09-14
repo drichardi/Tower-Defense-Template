@@ -7,8 +7,10 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private GameObject enemy;
     [SerializeField] private GameObject route;
     [SerializeField] private float timeToSpawn;
-    float time;
     [SerializeField] private float moveSpeed;
+
+    float time;
+
     // Start is called before the first frame update
     void Start()
     {
